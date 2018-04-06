@@ -6,7 +6,7 @@ type Key = Fin10
 
 newtype Fin10 = Fin10 Int
 
-canonFin10 (Fin10 x) = x `mod` 10
+canonFin10 (Fin10 x) = x `mod` 11
 
 instance Eq Fin10 where
   (==) = (==) `on` canonFin10
