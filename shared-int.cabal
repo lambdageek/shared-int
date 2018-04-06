@@ -1,0 +1,27 @@
+name:                shared-int
+version:             0.0.0.1
+license:             MIT
+license-file:        LICENSE
+author:              Aleksey Kliger
+maintainer:          aleksey@lambdageek.org
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=2.0
+
+library fin10-key
+  default-language:    Haskell2010
+  exposed-modules: Fin10Key
+  build-depends:   base
+
+library
+  default-language:    Haskell2010
+  exposed-modules: Test
+  reexported-modules: Fin10Key, Fin10Key.Set
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >=4.10 && <4.12,
+                       unpacked-containers,
+                       fin10-key
+  mixins: unpacked-containers (Set as Fin10Key.Set) requires (Key as Fin10Key)
+  
+    
