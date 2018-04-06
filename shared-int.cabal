@@ -5,7 +5,6 @@ license-file:        LICENSE
 author:              Aleksey Kliger
 maintainer:          aleksey@lambdageek.org
 build-type:          Simple
-extra-source-files:  ChangeLog.md
 cabal-version:       >=2.0
 
 library fin10-key
